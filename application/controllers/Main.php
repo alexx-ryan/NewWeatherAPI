@@ -11,26 +11,31 @@ class Main extends CI_Controller {
 	public function form_validation()
 	{
 		//echo 'OK';
-
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules("name", "name", 'required');
 		$this->form_validation->set_rules("latitude", "latitude", 'required');
 		$this->form_validation->set_rules("longitude", "longitude", 'required');
 		$this->form_validation->set_rules("date", "date", 'required');
 
-		if($this->form_validation->run()){  
-               
-			$this->load->model("main_model");
-
+		if($this->form_validation->run()){                 
+			$this->load->model("main_model");			
+			$data = array(
+				"name" 		=>$this->input->post("name"),
+				"latitude" 	=>$this->input->post("latitude"),
+				"longitude" =>$this->input->post("longitude"),
+				"date" 		=>$this->input->post("date")
+			);
+			$this->main_model->insert_data($data);
+			redirect(base_url() . "main/inserted");
       	}
-		else
-		{
-
+		else{
 			$this->index();
-
 		} 
-
-
-
 	} 
+
+	public function inserted(){
+		$this->index();
+	}
+
+
 }
