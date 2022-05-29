@@ -36,19 +36,29 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="col-sm-4">
 				</div>
 				<div class="col-sm-4">
-					<form action="<?php echo base_url()?>main/form_validation">
+					
+					<form method="post" action="<?php echo base_url()?>index.php/main/form_validation">
 
 						<label for="name">Name:</label><br>
-						<input type="text" id="name" name="name"><br>
+						<input type="text" id="name" name="name">
+						<?php echo form_error("name"); ?><br>
+
 
 						<label for="latitude">Latitude:</label><br>
-						<input type="text" id="latitude" name="latitude"><br><br>
+						<input type="text" id="latitude" name="latitude">
+						<?php echo form_error("latitude"); ?><br>
+
 
 						<label for="longitude">Longitude:</label><br>
-						<input type="text" id="longitude" name="longitude"><br><br>
+						<input type="text" id="longitude" name="longitude">
+						<?php echo form_error("longitude"); ?><br>
+
 						
 						<label for="date">Date:</label><br>
 						<input type="date" name="date" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" title="Enter a date in this formart YYYY-MM-DD" />
+						<?php echo form_error("date"); ?>
+
+						
 						<input type="submit" value="Submit">
 					</form>
 				</div>
