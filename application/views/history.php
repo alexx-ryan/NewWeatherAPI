@@ -28,7 +28,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 	</nav>
 	<div class="jumbotron text-center">
-			<h1>Input history!</h1>
+			<h1>Input history.</h1>
 	</div>
 	
 		<div class="container">

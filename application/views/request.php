@@ -28,7 +28,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 	</nav>
 	<div class="jumbotron text-center">
-			<h1>This is the new request page!</h1>
+			<h1>New API Request.</h1>
 	</div>
 	
 		<div class="container">
