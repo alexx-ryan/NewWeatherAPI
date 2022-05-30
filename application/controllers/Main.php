@@ -26,7 +26,7 @@ class Main extends CI_Controller {
 				"date" 		=>$this->input->post("date")
 			);
 			$this->main_model->insert_data($data);
-			redirect(base_url() . "main/inserted");
+			redirect(base_url() . "index.php/main/inserted");
       	}
 		else{
 			$this->index();
@@ -34,6 +34,18 @@ class Main extends CI_Controller {
 	} 
 
 	public function inserted(){
+		$this->index();
+	}
+
+
+	public function delete_data(){
+		$id = $this->uri->segment(3);
+		$this->load->model("main_model");
+		$this->main_model->delete_data($id);
+		redirect(base_url() . "index.php/main/deleted");
+	}
+
+	public function deleted(){
 		$this->index();
 	}
 

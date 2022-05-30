@@ -21,9 +21,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<a class="navbar-brand" href="#">Visual Crossing Weather App</a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li><a href="<?php echo base_url() ?>index.php/"> Home</a></li>
-					<li><a href="<?php echo base_url() ?>index.php/request/"> New Request</a></li>
-					<li><a href="<?php echo base_url() ?>index.php/history/"> Previous Requests</a></li>
+				<li><a href="<?php echo base_url()?>index.php/">				Home</a></li>
+				<li><a href="<?php echo base_url()?>index.php/request/">		New Request</a></li>
+				<li><a href="<?php echo base_url()?>index.php/DataController/">	Previous Requests</a></li>	
 				</ul>
 			</div>
 		</nav>
@@ -37,9 +37,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<div class="col-sm-4">
 					<form method="post" action="<?php echo base_url() ?>index.php/main/form_validation">
-						<?php if($this->uri->segment(2) == "inserted"){
-							echo "Request has been sent!";
-						}?>
+
+						<?php if($this->uri->segment(2) == "inserted"){ echo "Request has been sent!";}?><br><br>
+
 						<label for="name">Name:</label><br>
 						<input type="text" id="name" name="name">
 						<?php echo form_error("name"); ?><br>

@@ -33,13 +33,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-				</div>
-				<div class="col-sm-4">
-					<p>Welcome to Visual Crossing weather application. </p>
-				</div>
-				<div class="col-sm-4">
-				</div>
+				<div class="col-sm-12">
+					<p>Visual Crossing is a leading provider of weather data and enterprise analysis tools to data scientists, business analysts, professionals, and academics. ~
+						Founded in 2003, our mission has always been to empower data consumers and analysts to make better decisions based on high-quality, easy-to-access data. 
+						For nearly 20 years Visual Crossing has been providing enterprise-class solutions to some of the largest businesses in the world.
+						Our weather data API leads the industry by providing the lowest-cost access to all types of weather data for apps, code, and web pages worldwide. 
+						Whether you need historical weather data, weather forecasts, climate summaries, historical weather forecasts, 
+						or specialty weather measures such as solar radiation, degree days, and weather alerts, 
+						Visual Crossing provides the data that you need for any weather project.</p>
+				</div>		
 			</div>
 		</div>
 

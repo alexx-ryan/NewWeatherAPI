@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed');?>
+<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
@@ -21,7 +22,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="<?php echo base_url() ?>index.php/"> Home</a></li>
 					<li><a href="<?php echo base_url() ?>index.php/request/"> New Request</a></li>
-					<li><a href="<?php echo base_url() ?>index.php/history/"> Previous Requests</a></li>
+					<li><a href="<?php echo base_url() ?>index.php/DataController/"> Previous Requests</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -32,8 +33,7 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4">
+				<div class="col-sm-12">
 					<div id="container">
 						<table class="table">
 							<thead>
@@ -51,6 +51,9 @@
 										<td><?php echo $input['latitude'] ?></td>
 										<td><?php echo $input['longitude'] ?></td>
 										<td><?php echo $input['date'] ?></td>
+
+										<td><input type="button" value="View Details"></td>
+										<td><a href="#" class="delete_data" id="<?php echo $input['id'] ?>">Delete</a></td>
 									</tr>
 
 								<?php endforeach; ?>
@@ -59,12 +62,27 @@
 						</table>
 					</div>
 				</div>
-				<div class="col-sm-4"></div>
 			</div>
 		</div>
-
-
 	</div>
+
+	<script>
+		$(document).ready(function() {
+			$('.delete_data').click(function() {
+				var id = $(this).attr("id");
+				if(confirm("Are you sure you want to delete this?")){
+					window.location="<?php echo base_url(); ?>index.php/main/delete_data/" + id;
+				}
+				else
+				{
+					return false;
+				}
+			});
+		});
+	</script>
+
+
+
 </body>
 
 </html>
