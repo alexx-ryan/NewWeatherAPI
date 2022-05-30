@@ -12,6 +12,7 @@ class Main extends CI_Controller {
 	{
 		//echo 'OK';
 		$this->load->library('form_validation');
+		$this->form_validation->set_rules("key", "key", 'required');
 		$this->form_validation->set_rules("name", "name", 'required');
 		$this->form_validation->set_rules("latitude", "latitude", 'required');
 		$this->form_validation->set_rules("longitude", "longitude", 'required');
