@@ -20,9 +20,9 @@
 					<a class="navbar-brand" href="#">Visual Crossing Weather App</a>
 				</div>
 				<ul class="nav navbar-nav">
-					<li><a href="<?php echo base_url() ?>index.php/"> Home</a></li>
-					<li><a href="<?php echo base_url() ?>index.php/request/"> New Request</a></li>
-					<li><a href="<?php echo base_url() ?>index.php/DataController/"> Previous Requests</a></li>
+					<li><a href="<?php echo base_url() ?>index.php/"> 				Home</a></li>
+					<li><a href="<?php echo base_url() ?>index.php/request/"> 		New Request</a></li>
+					<li><a href="<?php echo base_url()?>index.php/history/">		Previous Requests</a></li>	
 				</ul>
 			</div>
 		</nav>
