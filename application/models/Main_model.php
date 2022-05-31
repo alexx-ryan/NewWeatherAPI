@@ -16,4 +16,9 @@ class Main_model extends CI_Model {
         $this->db->delete("user_inputs");
     }
 
+    function delete_data_response($id){
+        $this->db->where("id", $id);
+        $this->db->delete("responses");
+    }
+
 }

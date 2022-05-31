@@ -52,7 +52,7 @@
 										<td><?php echo $input['longitude'] ?></td>
 										<td><?php echo $input['date'] ?></td>
 
-										<td><a href="#" class="" id="<?php echo $input['id'] ?>">View details</a></td>
+										<td><a href="<?php echo base_url()?>index.php/details/loadDetails/<?php echo $input['id'] ?>">View details</a></td>
 										<td><a href="#" class="delete_data" id="<?php echo $input['id'] ?>">Delete</a></td>
 									</tr>
 

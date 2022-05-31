@@ -104,6 +104,8 @@ class Main extends CI_Controller
 		$id = $this->uri->segment(3);
 		$this->load->model("main_model");
 		$this->main_model->delete_data($id);
+		$this->main_model->delete_data_response($id);
+
 		redirect(base_url() . "index.php/main/deleted");
 	}
 
